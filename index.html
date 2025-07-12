@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca de Componentes UI</title>
+
+  <!-- Estilos base y globales -->
+  <link rel="stylesheet" href="../styles/variables.css" />
+  <link rel="stylesheet" href="../styles/base.css" />
+  <link rel="stylesheet" href="../styles/layout.css" />
+
+  <!-- Componentes UI -->
+  <link rel="stylesheet" href="../components/button.css" />
+  <link rel="stylesheet" href="../components/card.css" />
+  <link rel="stylesheet" href="../components/modal.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Biblioteca de Componentes UI</h1>
+
+    <!-- 🔘 BOTONES -->
+    <section>
+      <h2>Botones</h2>
+      <div class="flex-row">
+        <button class="btn btn-primary">Primario</button>
+        <button class="btn btn-secondary">Secundario</button>
+        <button class="btn btn-primary" disabled>Deshabilitado</button>
+      </div>
+    </section>
+
+    <!-- 🃏 TARJETAS -->
+    <section>
+      <h2>Tarjetas</h2>
+      <div class="two-column-layout">
+        <div class="card">
+          <h3 class="card-title">Tarjeta 1</h3>
+          <p class="card-content">Contenido de la tarjeta 1 con diseño simple y sombra.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Tarjeta 2</h3>
+          <p class="card-content">Otra tarjeta con estructura reutilizable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📦 MODAL -->
+    <section>
+      <h2>Modal</h2>
+      <button class="btn btn-primary" onclick="openModal()">Abrir Modal</button>
+
+      <div class="modal-overlay" id="modal">
+        <div class="modal">
+          <button class="modal-close" onclick="closeModal()">&times;</button>
+          <h3>Modal Activo</h3>
+          <p>Este es un componente modal para mostrar información o formularios.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- JS para el Modal -->
+  <script>
+    function openModal() {
+      document.getElementById('modal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>

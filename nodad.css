@@ -1,0 +1,54 @@
+@import '../styles/variables.css';
+
+/* Fondo oscuro semitransparente */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Cuando el modal está activo */
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Contenedor del modal */
+.modal {
+  background-color: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+/* Animación cuando está activo */
+.modal-overlay.active .modal {
+  transform: translateY(0);
+}
+
+/* Botón cerrar */
+.modal-close {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+@import './variables.css';
+
+/* 🔄 Reset básico y normalización */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🔤 Tipografía global */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--light-color);
+  color: #212529;
+  line-height: 1.5;
+  padding: var(--spacing-lg);
+}
+
+/* 🖱️ Elementos interactivos */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* 🔗 Enlaces */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 🔘 Títulos */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+/* 📦 Secciones y artículos */
+section {
+  margin-bottom: var(--spacing-xl);
+}

@@ -1,0 +1,40 @@
+/* Estilos de estructura general usando Flex y Grid */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Layout de secciones en dos columnas */
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-lg);
+}
+
+/* Responsive: cambia a 1 columna en pantallas pequeñas */
+@media (max-width: 768px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Distribución horizontal con Flexbox */
+.flex-row {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Alineación vertical centrada */
+.center-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
